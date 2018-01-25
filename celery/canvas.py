@@ -231,7 +231,7 @@ class Signature(dict):
             opts['reply_to'] = self.app.oid
         if group_id:
             opts['group_id'] = group_id
-        if chord:
+        if chord is not None:
             opts['chord'] = chord
         return self.AsyncResult(tid)
     _freeze = freeze
