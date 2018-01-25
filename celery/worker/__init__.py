@@ -21,7 +21,8 @@ except ImportError:  # pragma: no cover
 
 from billiard import cpu_count
 from billiard.util import Finalize
-from kombu.syn import detect_environment
+from kombu.utils.compat import detect_environment
+
 
 from celery import bootsteps
 from celery.bootsteps import RUN, TERMINATE
