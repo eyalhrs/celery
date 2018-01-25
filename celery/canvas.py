@@ -843,7 +843,7 @@ class group(Signature):
             gid = opts['task_id'] = uuid()
         if group_id:
             opts['group_id'] = group_id
-        if chord:
+        if chord is not None:
             opts['chord'] = chord
         root_id = opts.setdefault('root_id', root_id)
         parent_id = opts.setdefault('parent_id', parent_id)
